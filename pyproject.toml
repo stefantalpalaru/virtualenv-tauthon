@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "virtualenv-tauthon"
 description = "Tauthon support for Virtualenv"
