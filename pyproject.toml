@@ -1,0 +1,38 @@
+[project]
+name = "virtualenv-tauthon"
+description = "Tauthon support for Virtualenv"
+readme = "README.md"
+license = {text = "MIT"}
+maintainers = [{ name = "Ștefan Talpalaru", email = "stefantalpalaru@yahoo.com" }]
+urls.Homepage = "https://github.com/stefantalpalaru/virtualenv-tauthon"
+urls.Source = "https://github.com/stefantalpalaru/virtualenv-tauthon"
+urls.Tracker = "https://github.com/stefantalpalaru/virtualenv-tauthon/issues"
+requires-python = ">=3.7"
+dependencies = [
+  "virtualenv",
+]
+keywords = ["environments", "isolated", "tauthon", "virtual"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Utilities",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "virtualenv_tauthon.VERSION"}
+
+[project.entry-points."virtualenv.create"]
+tauthon-posix = "virtualenv_tauthon.create:TauthonPosix"
+tauthon-win = "virtualenv_tauthon.create:TauthonWindows"
+
