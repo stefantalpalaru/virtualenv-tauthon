@@ -10,6 +10,9 @@ With this module and Tauthon installed, you can create a Tauthon-based virtual e
 virtualenv -p tauthon2.8 my_venv
 ```
 
+Since we rely on Virtualenv's Python2 support, you need to use [Virtualenv
+20.21.1 or older](https://github.com/pypa/virtualenv/pull/2548).
+
 ## Installation
 
 This package is [available on PyPi](https://pypi.org/project/virtualenv-tauthon):
